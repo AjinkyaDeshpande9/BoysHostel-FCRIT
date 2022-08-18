@@ -35,7 +35,7 @@
                     app:srcCompat="@drawable/profile_img_bg" />
 
                 <ImageView
-                    android:id="@+id/imageView10"
+                    android:id="@+id/profilefrag_image"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintBottom_toBottomOf="@+id/imageView9"
@@ -44,10 +44,10 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.773"
-                    app:srcCompat="@drawable/profile" />
+                    app:srcCompat="@drawable/user_profile_img" />
 
                 <TextView
-                    android:id="@+id/textView14"
+                    android:id="@+id/profilefrag_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
@@ -55,9 +55,22 @@
                     android:textAllCaps="true"
                     android:textSize="25dp"
                     android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="@+id/imageView10"
-                    app:layout_constraintStart_toStartOf="@+id/imageView10"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+                    app:layout_constraintEnd_toEndOf="@+id/profilefrag_image"
+                    app:layout_constraintStart_toStartOf="@+id/profilefrag_image"
+                    app:layout_constraintTop_toBottomOf="@+id/profilefrag_image" />
+
+                <TextView
+                    android:id="@+id/profilefrag_dept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Computer Department"
+                    android:textSize="18sp"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/profilefrag_name"
+                    app:layout_constraintStart_toStartOf="@+id/profilefrag_name"
+                    app:layout_constraintTop_toBottomOf="@+id/profilefrag_name" />
 
 
                 <LinearLayout
@@ -69,87 +82,52 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView14">
+                    app:layout_constraintTop_toBottomOf="@+id/profilefrag_dept">
 
-                    <Button
-                        android:id="@+id/button5"
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnPersonalDetails"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="18dp"
                         android:layout_marginBottom="10dp"
                         android:background="@drawable/profile_curved_rectangle"
-                        android:drawableStart="@drawable/ic_1"
+                        android:drawableStart="@drawable/profile_personal_info"
                         android:drawablePadding="20dp"
                         android:elevation="3dp"
                         android:paddingStart="20dp"
-                        android:text="Account Settings "
+                        android:text="Personal Details "
                         android:textAlignment="viewStart"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
-                    <Button
-                        android:id="@+id/button4"
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnAcademicDetails"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:background="@drawable/profile_curved_rectangle"
-                        android:drawableStart="@drawable/ic_2"
+                        android:drawableStart="@drawable/profile_academic_info"
                         android:drawablePadding="20dp"
                         android:elevation="3dp"
                         android:paddingStart="20dp"
-                        android:text="My Reviews"
+                        android:text="Academic Details"
                         android:textAlignment="viewStart"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
-                    <Button
-                        android:id="@+id/button3"
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnLeaveRegistry"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:background="@drawable/profile_curved_rectangle"
-                        android:drawableStart="@drawable/ic_3"
+                        android:drawableStart="@drawable/profile_leave_log"
                         android:drawablePadding="20dp"
                         android:elevation="3dp"
                         android:paddingStart="20dp"
-                        android:text="Personal Information"
-                        android:textAlignment="viewStart"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <Button
-                        android:id="@+id/button2"
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:background="@drawable/profile_curved_rectangle"
-                        android:drawableStart="@drawable/ic_4"
-                        android:drawableEnd="@drawable/circle_red"
-                        android:paddingEnd="20dp"
-
-                        android:drawablePadding="20dp"
-                        android:elevation="3dp"
-                        android:paddingStart="20dp"
-                        android:text="Notification"
-                        android:textAlignment="viewStart"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <Button
-                        android:id="@+id/button"
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:background="@drawable/profile_curved_rectangle"
-                        android:drawableStart="@drawable/ic_5"
-                        android:drawablePadding="20dp"
-                        android:elevation="3dp"
-                        android:paddingStart="20dp"
-                        android:text="Fingerprint Settings "
+                        android:text="Leave Registry"
                         android:textAlignment="viewStart"
                         android:textSize="18sp"
                         android:textStyle="bold" />

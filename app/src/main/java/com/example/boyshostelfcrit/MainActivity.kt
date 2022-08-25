@@ -7,6 +7,7 @@ import com.etebarian.meowbottomnavigation.MeowBottomNavigation
 import com.example.boyshostelfcrit.profile.PersonalDetails
 import kotlinx.android.synthetic.main.activity_main.*
 
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,16 +38,15 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-
     private fun replaceFragment(fragment:Fragment){
         val fragmentTransition = supportFragmentManager.beginTransaction()
         fragmentTransition.replace(R.id.mainFragmentContainer,fragment).addToBackStack(Fragment::class.java.simpleName).commit()
     }
-
     private fun addFragment(fragment:Fragment){
         val fragmentTransition = supportFragmentManager.beginTransaction()
         fragmentTransition.add(R.id.mainFragmentContainer,fragment).addToBackStack(Fragment::class.java.simpleName).commit()
     }
+
 
 
 }

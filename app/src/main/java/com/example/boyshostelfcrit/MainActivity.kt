@@ -2,15 +2,16 @@ package com.example.boyshostelfcrit
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation
+import com.example.boyshostelfcrit.profile.PersonalDetails
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
         addFragment(HomeFragment.newInstance())
         bottomNavigation.show(0)
@@ -34,15 +35,18 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+
     }
 
     private fun replaceFragment(fragment:Fragment){
         val fragmentTransition = supportFragmentManager.beginTransaction()
-        fragmentTransition.replace(R.id.fragmentContainer,fragment).addToBackStack(Fragment::class.java.simpleName).commit()
+        fragmentTransition.replace(R.id.mainFragmentContainer,fragment).addToBackStack(Fragment::class.java.simpleName).commit()
     }
 
     private fun addFragment(fragment:Fragment){
         val fragmentTransition = supportFragmentManager.beginTransaction()
-        fragmentTransition.add(R.id.fragmentContainer,fragment).addToBackStack(Fragment::class.java.simpleName).commit()
+        fragmentTransition.add(R.id.mainFragmentContainer,fragment).addToBackStack(Fragment::class.java.simpleName).commit()
     }
+
+
 }

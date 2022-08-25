@@ -14,10 +14,10 @@ import kotlinx.android.synthetic.main.fragment_profile.*
 import kotlinx.android.synthetic.main.fragment_profile.view.*
 
 class ProfileFragment : Fragment(){
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?):
+
         View? {
 
         val bind = FragmentProfileBinding.inflate(layoutInflater)

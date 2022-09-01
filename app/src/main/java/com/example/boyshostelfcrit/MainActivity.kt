@@ -13,13 +13,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
+//Code for the bottom Navigation Bar Using Meow
         addFragment(HomeFragment.newInstance())
         bottomNavigation.show(0)
         bottomNavigation.add(MeowBottomNavigation.Model(0,R.drawable.ic_home))
         bottomNavigation.add(MeowBottomNavigation.Model(1,R.drawable.ic_notifications))
         bottomNavigation.add(MeowBottomNavigation.Model(2,R.drawable.ic_profile))
 
+//        On Click for the nav bar
+//        Can increase the options by increasing in layout
         bottomNavigation.setOnClickMenuListener {
             when(it.id){
                 0 -> {

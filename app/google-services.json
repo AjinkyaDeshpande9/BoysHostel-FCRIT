@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "668935462672",
+    "project_id": "boyshostel-fcrit",
+    "storage_bucket": "boyshostel-fcrit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:668935462672:android:ebe6d8f33dd81945fd0f95",
+        "android_client_info": {
+          "package_name": "com.example.boyshostelfcrit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "668935462672-q4ge958n5m8nd3tncrdkb29dsrug2oh6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsZt6G3H5X8jLQXqt7wtGi_SzeMgl_tBI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "668935462672-q4ge958n5m8nd3tncrdkb29dsrug2oh6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

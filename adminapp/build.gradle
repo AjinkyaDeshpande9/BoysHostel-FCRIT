@@ -1,19 +1,15 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-    id 'kotlin-android-extensions'
-    id 'com.google.gms.google-services'
 }
-apply plugin: 'kotlin-android'
 
 android {
-    compileSdk 33
-    buildToolsVersion "30.0.3"
+    compileSdk 32
 
     defaultConfig {
-        applicationId "com.example.boyshostelfcrit"
+        applicationId "com.example.adminapp"
         minSdk 23
-        targetSdk 33
+        targetSdk 32
         versionCode 1
         versionName "1.0"
 
@@ -32,9 +28,6 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
-    }
-    viewBinding{
-        enabled =true
     }
 }
 
@@ -66,5 +59,4 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.6.1'
     implementation 'com.github.bumptech.glide:compiler:4.6.1'
     apply plugin: 'kotlin-kapt'
-
 }

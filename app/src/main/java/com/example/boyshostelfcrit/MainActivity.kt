@@ -5,10 +5,15 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation
 import com.example.boyshostelfcrit.profile.PersonalDetails
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
+
+    val db = Firebase.firestore
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -49,6 +54,6 @@ class MainActivity : AppCompatActivity() {
         fragmentTransition.add(R.id.mainFragmentContainer,fragment).addToBackStack(Fragment::class.java.simpleName).commit()
     }
 
-
+// Fetching data from firestore
 
 }

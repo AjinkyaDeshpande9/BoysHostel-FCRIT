@@ -18,3 +18,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Boys Hostel FCRIT"
 include ':app'
+include ':adminapp'

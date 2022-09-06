@@ -21,8 +21,7 @@ class LoginActivity : AppCompatActivity() {
             val email = getEmail.text.toString()
             val password = getPassword.text.toString()
             signIn(email, password)
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+
         }
     }
     private fun signIn(email:String, password:String)
@@ -31,8 +30,8 @@ class LoginActivity : AppCompatActivity() {
             when{
                 it.isSuccessful -> {
                     Toast.makeText(this,"User Login Successfully",Toast.LENGTH_LONG).show()
-
-
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
                 }
                 else -> {
                     Toast.makeText(this, "User Login Failed", Toast.LENGTH_SHORT).show()

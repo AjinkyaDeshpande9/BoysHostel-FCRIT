@@ -1,15 +1,18 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android-extensions'
 }
+apply plugin: 'kotlin-android'
 
 android {
-    compileSdk 32
+    compileSdk 33
+    buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.example.adminapp"
         minSdk 23
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -28,6 +31,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+    viewBinding{
+        enabled =true
     }
 }
 

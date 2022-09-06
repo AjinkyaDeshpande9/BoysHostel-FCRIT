@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdminMainActivity">
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -70,7 +70,7 @@
                     tools:ignore="UseCompoundDrawables">
 
                     <ImageView
-                        android:id="@+id/formShortDuration"
+                        android:id="@+id/addStudent"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:clickable="true"
@@ -112,7 +112,7 @@
                     android:visibility="visible">
 
                     <ImageView
-                        android:id="@+id/formLongDuration"
+                        android:id="@+id/editStudentDetails"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:clickable="true"
@@ -153,7 +153,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/complains"
+                        android:id="@+id/approveLeave"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center"
@@ -190,6 +190,7 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/sendMessage"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/dashboard_message"/>
@@ -259,6 +260,7 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/lostAndFound"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/dashboard_lostfound"/>
@@ -292,6 +294,7 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/complains"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@drawable/dashboard_complaint"/>

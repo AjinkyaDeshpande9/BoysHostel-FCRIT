@@ -11,6 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/background"
         android:orientation="vertical">
 
         <RelativeLayout
@@ -29,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:text="Welcome"
                 android:textSize="22sp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/text"/>
 
             <TextView
                 android:id="@+id/username"
@@ -38,7 +39,7 @@
                 android:layout_marginLeft="7dp"
                 android:text="Ajinkya"
                 android:textSize="22sp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/text"/>
             </LinearLayout>
         </RelativeLayout>
 
@@ -55,7 +56,8 @@
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:elevation="6dp"
-                app:cardElevation="60dp"
+                app:cardElevation="20dp"
+                app:cardBackgroundColor="@color/boxes"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp"
                 android:clickable="true">
@@ -86,7 +88,7 @@
                         android:clickable="true"
                         android:text="Form \n (Short Duration)"
                         android:textAlignment="center"
-                        android:textColor="#6f6f6f"
+                        android:textColor="@color/text"
                         android:textSize="18sp"
                         android:visibility="visible" />
 
@@ -99,7 +101,8 @@
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:elevation="6dp"
-                app:cardElevation="60dp"
+                app:cardElevation="20dp"
+                app:cardBackgroundColor="@color/boxes"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp"
                 android:clickable="true">
@@ -128,7 +131,7 @@
                         android:clickable="true"
                         android:text="Form \n (Long Duration)"
                         android:textAlignment="center"
-                        android:textColor="#6f6f6f"
+                        android:textColor="@color/text"
                         android:textSize="18sp"
                         android:visibility="visible" />
 
@@ -141,7 +144,8 @@
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:elevation="6dp"
-                app:cardElevation="60dp"
+                app:cardElevation="20dp"
+                app:cardBackgroundColor="@color/boxes"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp">
 
@@ -164,7 +168,7 @@
                         android:layout_height="wrap_content"
                         android:text="Complain"
                         android:textSize="18sp"
-                        android:textColor="#6f6f6f"
+                        android:textColor="@color/text"
                         android:layout_marginTop="12dp"/>
 
                 </LinearLayout>
@@ -176,7 +180,8 @@
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:elevation="6dp"
-                app:cardElevation="60dp"
+                app:cardElevation="20dp"
+                app:cardBackgroundColor="@color/boxes"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp">
 
@@ -197,7 +202,7 @@
                         android:layout_height="wrap_content"
                         android:text="Lost &amp; Found"
                         android:textSize="18sp"
-                        android:textColor="#6f6f6f"
+                        android:textColor="@color/text"
                         android:layout_marginTop="12dp"/>
 
                 </LinearLayout>
@@ -209,7 +214,8 @@
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:elevation="6dp"
-                app:cardElevation="60dp"
+                app:cardElevation="20dp"
+                app:cardBackgroundColor="@color/boxes"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp">
 
@@ -231,7 +237,7 @@
                         android:layout_height="wrap_content"
                         android:text="Mess"
                         android:textSize="18sp"
-                        android:textColor="#6f6f6f"
+                        android:textColor="@color/text"
                         android:layout_marginTop="12dp"/>
 
                 </LinearLayout>
@@ -243,7 +249,8 @@
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:elevation="6dp"
-                app:cardElevation="60dp"
+                app:cardElevation="20dp"
+                app:cardBackgroundColor="@color/boxes"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp">
 
@@ -264,7 +271,7 @@
                         android:layout_height="wrap_content"
                         android:text="Lost &amp; Found"
                         android:textSize="18sp"
-                        android:textColor="#6f6f6f"
+                        android:textColor="@color/text"
                         android:layout_marginTop="12dp"/>
 
                 </LinearLayout>
@@ -276,7 +283,8 @@
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:elevation="6dp"
-                app:cardElevation="60dp"
+                app:cardElevation="20dp"
+                app:cardBackgroundColor="@color/boxes"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp">
 
@@ -297,7 +305,7 @@
                         android:layout_height="wrap_content"
                         android:text="Form"
                         android:textSize="18sp"
-                        android:textColor="#6f6f6f"
+                        android:textColor="@color/text"
                         android:layout_marginTop="12dp"/>
 
                 </LinearLayout>
@@ -309,7 +317,8 @@
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:elevation="6dp"
-                app:cardElevation="60dp"
+                app:cardElevation="20dp"
+                app:cardBackgroundColor="@color/boxes"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp">
 
@@ -330,7 +339,7 @@
                         android:layout_height="wrap_content"
                         android:text="Lost &amp; Found"
                         android:textSize="18sp"
-                        android:textColor="#6f6f6f"
+                        android:textColor="@color/text"
                         android:layout_marginTop="12dp"/>
 
                 </LinearLayout>
@@ -342,7 +351,8 @@
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:elevation="6dp"
-                app:cardElevation="60dp"
+                app:cardElevation="20dp"
+                app:cardBackgroundColor="@color/boxes"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp">
 
@@ -363,7 +373,7 @@
                         android:layout_height="wrap_content"
                         android:text="Form"
                         android:textSize="18sp"
-                        android:textColor="#6f6f6f"
+                        android:textColor="@color/text"
                         android:layout_marginTop="12dp"/>
 
                 </LinearLayout>
@@ -375,7 +385,8 @@
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:elevation="6dp"
-                app:cardElevation="60dp"
+                app:cardElevation="20dp"
+                app:cardBackgroundColor="@color/boxes"
                 app:cardCornerRadius="12dp"
                 android:layout_margin="12dp">
 
@@ -396,7 +407,7 @@
                         android:layout_height="wrap_content"
                         android:text="Lost &amp; Found"
                         android:textSize="18sp"
-                        android:textColor="#6f6f6f"
+                        android:textColor="@color/text"
                         android:layout_marginTop="12dp"/>
 
                 </LinearLayout>

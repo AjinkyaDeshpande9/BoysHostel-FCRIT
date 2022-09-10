@@ -56,6 +56,63 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/regName" />
 
+    <TextView
+        android:id="@+id/regCourseText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="216dp"
+        android:text="Course"
+        android:textColor="#0D1723"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.425"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/regEmail" />
+
+    <RadioGroup
+        android:id="@+id/regCourse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:minWidth="297dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regCourseText">
+
+
+        <RadioButton
+            android:id="@+id/reg2yr"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="Engineering"
+            android:textAlignment="center"
+            android:textColor="#0D1723"
+            android:textColorLink="#0D1723" />
+
+        <RadioButton
+            android:id="@+id/reg3yr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Diploma"
+            android:textColor="#0D1723"
+            android:textColorLink="#0D1723" />
+
+        <RadioButton
+            android:id="@+id/reg4yr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="12th"
+            android:textColor="#0D1723"
+            android:textColorLink="#0D1723" />
+
+    </RadioGroup>
+
     <EditText
         android:id="@+id/regDepartment"
         android:layout_width="297dp"
@@ -72,7 +129,7 @@
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/regCourse" />
 
     <EditText
         android:id="@+id/regRollNo"
@@ -83,7 +140,8 @@
         android:drawablePadding="5dp"
         android:ems="10"
         android:hint="Roll No"
-        android:maxLength="16"
+        android:inputType="number"
+        android:maxLength="7"
         android:textColorHighlight="#0D1723"
         android:textColorHint="#B4BAC1"
         android:textColorLink="#0D1723"
@@ -92,35 +150,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/regDepartment" />
 
-
-    <TextView
-        android:id="@+id/regYearText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="216dp"
-        android:text="Year "
-        android:textColor="#0D1723"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.075"
-        app:layout_constraintStart_toStartOf="@+id/regVecNumber"
-        app:layout_constraintTop_toBottomOf="@+id/regVecNumber"
-        tools:ignore="MissingConstraints" />
-
     <EditText
-        android:id="@+id/regVecNumber"
+        android:id="@+id/regContactNo"
         android:layout_width="297dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
         android:layout_marginTop="8dp"
         android:backgroundTint="#0D1723"
         android:drawablePadding="5dp"
         android:ems="10"
-        android:hint="Vehicle Number"
-        android:inputType="text"
+        android:hint="Contact Number"
         android:maxLength="10"
-        android:textAllCaps="true"
         android:textColorHighlight="#0D1723"
         android:textColorHint="#B4BAC1"
         android:textColorLink="#0D1723"
@@ -129,71 +168,86 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/regRollNo" />
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/regParentContactNo"
+        android:layout_width="297dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:minWidth="297dp"
-        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#0D1723"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="Parent Contact Number"
+        android:maxLength="10"
+        android:textColorHighlight="#0D1723"
+        android:textColorHint="#B4BAC1"
+        android:textColorLink="#0D1723"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regYearText">
+        app:layout_constraintTop_toBottomOf="@+id/regContactNo" />
 
-        <RadioButton
-            android:id="@+id/reg2yr"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:checked="true"
-            android:text="II Year"
-            android:textAlignment="center"
-            android:textColor="#0D1723"
-            android:textColorLink="#0D1723" />
+    <EditText
+        android:id="@+id/regPermanentAddress"
+        android:layout_width="297dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#0D1723"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="Permanent Address"
+        android:inputType="textPostalAddress"
+        android:textAllCaps="true"
+        android:textColorHighlight="#0D1723"
+        android:textColorHint="#B4BAC1"
+        android:textColorLink="#0D1723"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regParentContactNo" />
 
-        <RadioButton
-            android:id="@+id/reg3yr"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="III Year"
-            android:textColor="#0D1723"
-            android:textColorLink="#0D1723" />
+    <EditText
+        android:id="@+id/regRoomNo"
+        android:layout_width="297dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#0D1723"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="Room No"
+        android:inputType="textPersonName"
+        android:maxLength="4"
+        android:textColorHighlight="#0D1723"
+        android:textColorHint="#B4BAC1"
+        android:textColorLink="#0D1723"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regPermanentAddress" />
 
-        <RadioButton
-            android:id="@+id/reg4yr"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="IV Year"
-            android:textColor="#0D1723"
-            android:textColorLink="#0D1723" />
-
-    </RadioGroup>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/regSubmitbutton"
+        android:id="@+id/buttonRegister"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="16dp"
         android:text="Register"
-        android:textColor="@color/text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/regRoomNo" />
 
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="8dp"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regSubmitbutton" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonRegister" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,4 +13,5 @@
     <color name="texthint">#CBC0DF</color>
     <color name="entryfield">#322C3A</color>
     <color name="button">#211235</color>
+    <color name="button_border">#6D00FF</color>
 </resources>

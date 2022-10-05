@@ -10,4 +10,8 @@
     <color name="background">#FFFFFF</color>
     <color name="boxes">#FFFFFF</color>
     <color name="text">#000000</color>
+    <color name="texthint">#5f8f7f</color>
+    <color name="entryfield">#EBFDF7</color>
+    <color name="button">#08FDA1</color>
+    <color name="button_border">#84FFD0</color>
 </resources>

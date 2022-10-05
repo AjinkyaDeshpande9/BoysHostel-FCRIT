@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
+import android.widget.RadioButton
 import android.widget.Toast
 import androidx.core.view.isNotEmpty
 import com.example.adminapp.databinding.ActivityAddStudentBinding
@@ -19,50 +20,31 @@ class AddStudent : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
-//    var SName = binding.regName.text.toString()
-//    val SEmail = binding.regName.text.toString()
-//    val SRollNo = binding.regName.text.toString().toInt()
-//    val SContactNo = binding.regName.text.toString().toInt()
-//    val SParentContactNo = binding.regName.text.toString().toInt()
-//    val SDepartment = binding.regName.text.toString()
-//    val SRoomNo = binding.regName.text.toString()
-//    val SPermanentAddress = binding.regName.text.toString()
-//    val SCourse = binding.regCourse.getCheckedRadioButtonId()
-
-
         super.onCreate(savedInstanceState)
         binding = ActivityAddStudentBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.buttonRegister.setOnClickListener(View.OnClickListener {
-//            if (TextUtils.isEmpty(SName) || TextUtils.isEmpty(SEmail) || TextUtils.isEmpty(SRollNo.toString()) ||
-//                TextUtils.isEmpty(SContactNo.toString()) || TextUtils.isEmpty(SParentContactNo.toString())
-//            ) {
-//                Toast.makeText(this, "All Fields are Required", Toast.LENGTH_SHORT).show();
-//                regName.setError("Name is Required.")
-//                regEmail.setError("Email is Required.")
-//                regRollNo.setError("Roll Number is Required.")
-//                regContactNo.setError("Contact Number is Required.")
-//                regParentContactNo.setError("Parent Contact Number is Required.")
-//            } else {
-//                if (SContactNo.toString().length != 10) {
-//                    regContactNo.setError("Enter a valid number.");
-//                    Toast.makeText(this, "Contact number not correct!", Toast.LENGTH_LONG).show();
-//                }
-//                else if (SParentContactNo.toString().length != 10) {
-//                    regContactNo.setError("Enter a valid number.");
-//                    Toast.makeText(this, "Contact number not correct!", Toast.LENGTH_LONG).show();
-//                }
-//                else
-            if (binding.regName.text.isNotEmpty() && binding.regEmail.text.isNotEmpty() &&
-                binding.regRollNo.text.isNotEmpty())
-//                && binding.regContactNo.text.isNotEmpty() &&
-//                binding.regParentContactNo.text.isNotEmpty())
+            if (binding.regName.text.isEmpty() || binding.regEmail.text.isEmpty() ||
+                binding.regRollNo.text.isEmpty() || binding.regContactNo.text.isEmpty() || binding.regParentContactNo.text.isEmpty())
+            {
+                Toast.makeText(this, "All Fields are Required", Toast.LENGTH_SHORT).show();
+                regName.setError("Name is Required.")
+                regEmail.setError("Email is Required.")
+                regRollNo.setError("Roll Number is Required.")
+                regContactNo.setError("Contact Number is Required.")
+                regParentContactNo.setError("Parent Contact Number is Required.")
+            } else {
+                 if (binding.regName.text.isNotEmpty() && binding.regEmail.text.isNotEmpty() &&
+                binding.regRollNo.text.isNotEmpty() && binding.regContactNo.text.isNotEmpty() &&
+                binding.regParentContactNo.text.isNotEmpty())
                 {
-                    storeNewUsersData()
+                        storeNewUsersData()
+
                 }
-//            }
+            }
         })
 }
+
 
     private fun storeNewUsersData() {
         val student = hashMapOf(
@@ -73,13 +55,14 @@ class AddStudent : AppCompatActivity() {
             "Roll No" to binding.regRollNo.text.toString().toInt(),
             "Department" to binding.regDepartment.text.toString(),
             "Email" to binding.regEmail.text.toString(),
-            "Student Name" to binding.regName.text.toString()
-
+            "Student Name" to binding.regName.text.toString(),
+            "Course" to binding.regCourse.checkedRadioButtonId.toString()
         )
+
         db.collection("Students")
             .add(student)
             .addOnSuccessListener { documentReference ->
-                Toast.makeText(applicationContext,"Student Registered with ID: ${documentReference.id}",Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext,"Student Registered",Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this, MainActivity::class.java))
             }
             .addOnFailureListener { e ->

@@ -1,16 +1,220 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".home.FormShort">
 
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="50sp"
-        android:textColor="@color/black"
-        android:textAlignment="center"
-        android:text="Short Duration Form Fragment" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <ImageButton
+            android:id="@+id/shortFormBack"
+            android:layout_width="50dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/boxes"
+            android:src="@drawable/ic_back"
+            app:layout_constraintEnd_toStartOf="@+id/FormImage"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/FormImage"
+            android:layout_width="180dp"
+            android:layout_height="132dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/dashboard_form" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="\t\t\t\t\t\t\t\t\t\Form \n (Short Duration)"
+            android:textColor="@color/text"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/FormImage" />
+
+        <TextView
+            android:id="@+id/leaveDate"
+            android:layout_width="297dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/enter_field"
+            android:drawablePadding="5dp"
+            android:paddingTop="5dp"
+            android:ems="10"
+            android:paddingLeft="8dp"
+            android:text="Date Of Leaving"
+            android:textColor="@color/text"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.315"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:layout_constraintBottom_toBottomOf="@+id/leaveDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.195"
+            app:layout_constraintStart_toEndOf="@+id/leaveDate"
+            app:layout_constraintTop_toTopOf="@+id/leaveDate"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/ic_drop_down" />
+
+        <TextView
+            android:id="@+id/leaveTime"
+            android:layout_width="297dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/enter_field"
+            android:drawablePadding="5dp"
+            android:paddingTop="5dp"
+            android:ems="10"
+            android:paddingLeft="8dp"
+            android:text="Time Of Leaving"
+            android:textColor="@color/text"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.315"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/leaveDate" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:layout_constraintBottom_toBottomOf="@+id/leaveTime"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.195"
+            app:layout_constraintStart_toEndOf="@+id/leaveTime"
+            app:layout_constraintTop_toTopOf="@+id/leaveTime"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/ic_drop_down" />
+
+        <TextView
+            android:id="@+id/returnDate"
+            android:layout_width="297dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/enter_field"
+            android:drawablePadding="5dp"
+            android:paddingTop="5dp"
+            android:ems="10"
+            android:paddingLeft="8dp"
+            android:text="Date Of Return"
+            android:textColor="@color/text"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.315"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/leaveTime" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:layout_constraintBottom_toBottomOf="@+id/returnDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.195"
+            app:layout_constraintStart_toEndOf="@+id/returnDate"
+            app:layout_constraintTop_toTopOf="@+id/returnDate"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/ic_drop_down" />
+
+        <TextView
+            android:id="@+id/returnTime"
+            android:layout_width="297dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/enter_field"
+            android:drawablePadding="5dp"
+            android:paddingTop="5dp"
+            android:ems="10"
+            android:paddingLeft="8dp"
+            android:text="Time Of Return"
+            android:textColor="@color/text"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.315"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/returnDate" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:layout_constraintBottom_toBottomOf="@+id/returnTime"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.195"
+            app:layout_constraintStart_toEndOf="@+id/returnTime"
+            app:layout_constraintTop_toTopOf="@+id/returnTime"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/ic_drop_down" />
+
+        <EditText
+            android:id="@+id/purposeOfLeave"
+            android:layout_width="297dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/enter_field"
+            android:drawablePadding="5dp"
+            android:ems="10"
+            android:hint="Purpose Of Leaving"
+            android:inputType="textPersonName"
+            android:paddingLeft="8dp"
+            android:textColorHighlight="#0D1723"
+            android:textColorHint="@color/texthint"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.315"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/returnTime" />
+
+        <EditText
+            android:id="@+id/placeForLeave"
+            android:layout_width="297dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/enter_field"
+            android:drawablePadding="5dp"
+            android:ems="10"
+            android:hint="Place"
+            android:inputType="textPersonName"
+            android:paddingLeft="8dp"
+            android:textColorHighlight="#0D1723"
+            android:textColorHint="@color/texthint"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.315"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/purposeOfLeave" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonContinue"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:layout_marginTop="30dp"
+            android:text="Continue"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.45"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/placeForLeave" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
